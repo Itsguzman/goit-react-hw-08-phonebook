@@ -1,5 +1,5 @@
 import { SharedLayout } from '../shared/SharedLayout';
-import { HomePage } from 'pages/HomePage';
+// import { HomePage } from 'pages/HomePage';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
@@ -15,7 +15,7 @@ export const App = () => {
       <>
         <Routes>
           <Route path="/" element={<SharedLayout />}>
-            <Route index element={<HomePage />} />
+            <Route index element={<LoginPage />} />
             <Route
               path="/register"
               element={
