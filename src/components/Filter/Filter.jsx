@@ -8,12 +8,11 @@ export const Filter = ({ filter, setFilter }) => {
 
   return (
     <div>
-      <p>Find contacts by name</p>
       <input
         className={css.filterInput}
         type="text"
         name="filter"
-        placeholder="Search..."
+        placeholder="Find contacts by name"
         value={filter}
         onChange={handleFilterChange}
       />

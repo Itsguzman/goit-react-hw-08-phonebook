@@ -1,6 +1,6 @@
 import React from 'react';
+import { ContactListItem } from '../Items/Items';
 import PropTypes from 'prop-types';
-import Items from '../Items/Items';
 
 export const ContactList = ({ contacts, deleteContact }) => {
   return (
@@ -14,7 +14,7 @@ export const ContactList = ({ contacts, deleteContact }) => {
       </thead>
       <tbody>
         {contacts.map(contact => (
-          <Items
+          <ContactListItem
             key={contact.id}
             filteredContact={contact}
             deleteContact={deleteContact}
@@ -30,10 +30,8 @@ ContactList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      phone: PropTypes.string,
-    })
+      number: PropTypes.string.isRequired,
+    }).isRequired
   ).isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
-
-export default ContactList;
